@@ -58,6 +58,15 @@
         $('input').click(function () {
             // console.log('hi', $(this))
             // $(this).css('background', 'lightblue')
+            $('input').click(function () {
+            //$("tr:even").css('background', 'lightblue');
+            //alert.log('hi', $(this))            
+            if(this.checked){
+                $("table").find("tr").eq(this.parentNode.parentNode.rowIndex).css('background', 'lightblue');
+            }else {
+                $("table").find("tr").eq(this.parentNode.parentNode.rowIndex).css('background', 'white');
+            }
+        })
         })
 
 
