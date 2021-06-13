@@ -55,25 +55,25 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script>
+
+        // $('input').click(function () {
+        //     //$("tr:even").css('background', 'lightblue');
+        //     //alert.log('hi', $(this))            
+        //     if (this.checked) {
+        //         $("table").find("tr").eq(this.parentNode.parentNode.rowIndex).css('background', 'lightblue');
+        //     } else {
+        //         $("table").find("tr").eq(this.parentNode.parentNode.rowIndex).css('background', 'white');
+        //     }
+        // })
+
         $('input').click(function () {
-            // console.log('hi', $(this))
-            // $(this).css('background', 'lightblue')
-            $('input').click(function () {
-                //$("tr:even").css('background', 'lightblue');
-                //alert.log('hi', $(this))            
-                if (this.checked) {
-                    $("table").find("tr").eq(this.parents.parents.rowIndex).css('background', 'lightblue');
-                } else {
-                    $("table").find("tr").eq(this.parentNode.parentNode.rowIndex).css('background', 'white');
-                }
-            })
+            $('input:checked').parents().css('background', 'lightblue');
+
+            $('input:not(:checked)').parents().css('background', 'white');
         })
 
+// 更短的寫法!!
 
-
-        $(':checked')
-        //遍歷到tr
-// 到底???
 
 
     </script>
