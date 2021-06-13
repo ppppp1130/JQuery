@@ -67,9 +67,21 @@
         // })
 
         $('input').click(function () {
-            $('input:checked').parents().css('background', 'lightblue');
+            $("input:checked").parent().parent().css('background', 'lightblue');
+            $("input:not(:checked)").parent().parent().css('background', 'white');
+            // console.log('hi', $(this))
+            // $(this).css('background', 'lightblue')
+            //$("tr:even").css('background', 'lightblue');
+            //alert.log('hi', $(this))
 
-            $('input:not(:checked)').parents().css('background', 'white');
+            // if (this.checked) {
+            //     $("table").find("tr").eq(this.parents.parents.rowIndex).css('background', 'lightblue');
+            // } else {
+            //     $("table").find("tr").eq(this.parentNode.parentNode.rowIndex).css('background', 'white');
+            // }            
+        })
+
+        $('input:not(:checked)').parents().css('background', 'white');
         })
 
 // 更短的寫法!!
