@@ -56,17 +56,18 @@
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script>
         $('input').click(function () {
+            $("input:checked").parent().parent().css('background', 'lightblue');
+            $("input:not(:checked)").parent().parent().css('background', 'white');
             // console.log('hi', $(this))
             // $(this).css('background', 'lightblue')
-            $('input').click(function () {
-                //$("tr:even").css('background', 'lightblue');
-                //alert.log('hi', $(this))            
-                if (this.checked) {
-                    $("table").find("tr").eq(this.parents.parents.rowIndex).css('background', 'lightblue');
-                } else {
-                    $("table").find("tr").eq(this.parentNode.parentNode.rowIndex).css('background', 'white');
-                }
-            })
+            //$("tr:even").css('background', 'lightblue');
+            //alert.log('hi', $(this))
+                        
+            // if (this.checked) {
+            //     $("table").find("tr").eq(this.parents.parents.rowIndex).css('background', 'lightblue');
+            // } else {
+            //     $("table").find("tr").eq(this.parentNode.parentNode.rowIndex).css('background', 'white');
+            // }            
         })
 
 
