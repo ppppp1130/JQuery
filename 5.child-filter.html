@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 20px;
+            background-color: #CCC;
+            margin: 10px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="wrap">
+        <span>123</span>
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+        <div class="box">box5</div>
+        <div class="box">box6</div>
+        <div></div>
+        <!-- <span>456</span> -->
+    </div>
+    <span>666</span>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        $('.box:last-child').css('background', 'green');
+        $('.box:first-child').css('background', 'red');
+        $('span:first-of-type').css('color', 'red');
+        $('span:last-of-type').css('color', 'green');
+        $('.box:nth-child(7)').css('background', 'blue')
+        //nth-child 從1開始//
+        $('.box:nth-of-type(1)').css('background', 'lightpink')
+        $('span:only-child').css('color', 'lightgray')
+    </script>
+</body>
+
+</html>
