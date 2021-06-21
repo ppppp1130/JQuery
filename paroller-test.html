@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://use.fontawesome.com/9576790a31.js"></script>
+    <link rel="stylesheet" href="paroller-assets/style.css">
+</head>
+<body class="is-loading"></body>
+
+
+    <!-- Demo -->
+    <!-- Demo -->
+    <section id="demo" class="wrapper fade-up">
+        <div class="inner">
+            <h2>Demo</h2>
+
+            <h6 class="mega my-element"
+                data-paroller-factor="0.5"
+                data-paroller-factor-lg="0.4"
+                data-paroller-factor-md="0.3"
+                data-paroller-factor-sm="-0.2"
+                data-paroller-factor-xs="-0.1"
+                data-paroller-type="foreground"
+                data-paroller-direction="horizontal"
+                data-paroller-transition="transform .2s linear"
+            >
+                👋 Heola! こんにちは! Ahoj! Merhaba! Olá!
+            </h6>
+            <div class="show-more"><i class="fa fa-code"></i></div>
+            <div class="popover">
+                <div class="popover-inner">
+                    <div>
+                        <h5>html</h5>
+                        class="mega my-element"<br>
+                        data-paroller-factor="0.5"<br>
+                        data-paroller-factor-lg="0.4"<br>
+                        data-paroller-factor-md="0.3"<br>
+                        data-paroller-factor-sm="-0.2"<br>
+                        data-paroller-factor-xs="-0.1"<br>
+                        data-paroller-type="foreground"<br>
+                        data-paroller-direction="horizontal"<br>
+                        data-paroller-transition="transform .2s linear"
+                    </div>
+                    <div>
+                        <h5>js</h5>
+                        $('.my-element').paroller();
+                    </div>
+                </div>
+            </div>
+
+            <h6 class="mega align-right paroller-example">
+                გამარჯობა! Hello! Zdravo! Привет! 你好! Ciao! !مرحبا Hallå! Χαίρετε! ¡Hola! 👋
+            </h6>
+            <div class="show-more"><i class="fa fa-code"></i></div>
+            <div class="popover">
+                <div class="popover-inner">
+                    <div>
+                        <h5>html</h5>
+                        class="paroller-example"
+                    </div>
+                    <div>
+                        <h5>js</h5>
+                        $('.paroller-example').paroller({<br>
+                        factorXs: 0.1,<br>
+                        factorSm: 0.1,<br>
+                        factorMd: -0.4,<br>
+                        factorLg: -0.5,<br>
+                        factorXl: -0.6,<br>
+                        factor: -0.4,<br>
+                        type: 'foreground',<br>
+                        direction: 'horizontal'<br>
+                        });
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <!--paroller.js-->
+    <script src="jquery.paroller.js"></script>
+    <script src="paroller-assets/main.js"></script>
+    <script>
+        $(document)
+            .ready(function () {
+                //initialize paroller.js
+                $('[data-paroller-factor]').paroller();
+                //initialize paroller.js and set options for elements with .paroller class
+                $('.paroller-example').paroller({
+                    factorXs: 0.1,
+                    factorSm: 0.1,
+                    factorMd: -0.4,
+                    factorLg: -0.5,
+                    factorXl: -0.6,
+                    factor: -0.4,
+                    type: 'foreground',
+                    direction: 'horizontal',
+                    transition: 'transform .3s ease-out'
+                });
+            });
+    </script>
+
+
+</html>
